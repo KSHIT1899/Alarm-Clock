@@ -1,4 +1,4 @@
-localStorage.setItem("alarmtime",1000);
+//localStorage.setItem("alarmtime",1000);
 var sound=document.getElementById("music");
 
 //document.querySelector("alarmtime").innerHTML="22";
