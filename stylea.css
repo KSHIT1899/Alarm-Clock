@@ -444,7 +444,7 @@ button:hover,.time:hover{
  @keyframes pulsate-bck{0%{transform:scale(1)}50%{transform:scale(.9)}100%{transform:scale(1)}}
 
  .one-edge-shadow {
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 10px 30px -6px black;
   }
   .one-edge-shadow-2 {
     box-shadow: 0 10px 30px -6px black;
