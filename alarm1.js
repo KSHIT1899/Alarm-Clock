@@ -220,6 +220,7 @@ function playalarm(){
             sound.play();
             sound.loop=true;
             console.log("gotit");
+            document.getElementById("clk").classList.add("vibrate-3");
             document.getElementById("stop").classList.remove("hide");
             return;
         }
@@ -230,6 +231,7 @@ function stopalarm(){
         sound.pause();
         sound.currentTime=0;
         document.getElementById("stop").classList.add("hide");
+        document.getElementById("clk").classList.remove("vibrate-3");
 }
 function Unsetalarm(){
     document.getElementById("set").classList.remove("hide");
