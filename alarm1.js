@@ -166,10 +166,17 @@ function setalarm(){
     var time1=document.getElementById("alarmtime").valueAsNumber;
     // console.log(time);
     // console.log(time1);
-       if(isNaN(time1))
+      if(isNaN(time1))
        {
-           alert("Invalid date");
+           document.getElementById("bt").innerText="Invalid Time";
+           document.getElementById("bt").classList.remove("hide");
+           document.getElementById("bt").classList.add("wobble-hor-top");
            return;
+       }
+       else{
+        document.getElementById("bt").innerText="";  
+        document.getElementById("bt").classList.add("hide");
+        document.getElementById("bt").classList.remove("wobble-hor-top");
        }
     var alarmhours= time.substring(0,2);
     var alarmmin=time.substring(3,5);
