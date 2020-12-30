@@ -213,6 +213,7 @@ function playalarm(){
             sound.play();
             sound.loop=true;
             console.log("gotit");
+            document.getElementById("stop").classList.remove("hide");
             return;
         }
     }
@@ -221,6 +222,7 @@ function stopalarm(){
         document.getElementById("set").innerText="Set";
         sound.pause();
         sound.currentTime=0;
+        document.getElementById("stop").classList.add("hide");
 }
 function Unsetalarm(){
     document.getElementById("set").classList.remove("hide");
