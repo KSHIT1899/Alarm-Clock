@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylea.css">
+    <link rel="shortcut icon" href="img/alarm-clock.png"><!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title>Alarm Clock</title>
+</head>
+<body>
+<div id="bt">
+   <button id="hey" class="hide" onclick="startagain()">Go to alarm</button>
+</div>
+   <div id="whole">
+    <div class="clock one-edge-shadow-2">
+           <div class="num num1">
+              <div>1</div>
+           </div>
+           <div class="num num2">
+              <div>2</div>
+           </div>
+           <div class="num num3">
+              <div>3</div>
+           </div>
+           <div class="num num4">
+              <div>4</div>
+           </div>
+           <div class="num num5">
+              <div>5</div>
+           </div>
+           <div class="num num6">
+              <div>6</div>
+           </div>
+           <div class="num num7">
+              <div>7</div>
+           </div>
+           <div class="num num8">
+              <div>8</div>
+           </div>
+           <div class="num num9">
+              <div>9</div>
+           </div>
+           <div class="num num10">
+              <div>10</div>
+           </div>
+           <div class="num num11">
+              <div>11</div>
+           </div>
+           <div class="num num12">
+              <div>12</div>
+           </div>
+           <div class="hand" id="sec">
+              <div class="sec"></div>
+           </div>
+           <div class="hand" id="min">
+              <div class="min"></div>
+           </div>
+           <div class="hand" id="hour">
+              <div class="hour"></div>
+           </div>
+        </div>   
+        </div>  
+   <div id="rest">
+      <div id="alarm">
+      <p id="dt"></p>
+         <!--<span><input type="text" id="houra" placeholder="HH"></span>
+         <span><input type="text" id="mina" placeholder="MM"></span>
+         <span><input type="text" id="seca" placeholder="00" disabled></span>-->
+         <!-- <select  id="hrs"></select>
+         <select  id="mins"></select>
+         <select  id="secs"></select>
+         <select  id="ampm">
+            <option value="am">AM</option>
+            <option value="pm">PM</option>
+         </select> -->
+         
+      <input type="time" class="one-edge-shadow" id="alarmtime">
+      <div id="cover" class="hide one-edge-shadow"></div>
+         </div>
+         <br><br>
+         <button id="set" class="set pulsate-bck one-edge-shadow" onclick="setalarm()">Set</button>
+         <button id="Unset" class="set hide pulsate-bck one-edge-shadow" onclick="Unsetalarm()">Unset</button>
+         <button id="stop" class="stop pulsate-bck one-edge-shadow" onclick="stopalarm()">Stop</button>
+         <audio id="music" src="atone.mp3">audio</audio>
+   </div>
+   <div class="hide" id="welcome">
+  <p> Welcome to the Alarm<br>
+   </p>
+   <button class="heartbeat set" onclick="disappear()">click me</button> 
+   </div>
+    <script src="alarm1.js"></script>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

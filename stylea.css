@@ -1,0 +1,444 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+#hey{
+    transform: scale(2);
+}
+.hide{
+    display: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;overflow-x: hidden;
+    align-items: center;
+    background: #D3CCE3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* display:none; */
+    /* background: linear-gradient(155deg,#150485,#590995); */
+}
+#whole{
+    width:50%;
+    display:inline;
+    margin:20px;
+}
+#rest{
+    width:50%;
+    display:inline;
+    margin:20px;
+    margin-bottom:100px;
+}
+.clock{
+    position:relative;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    border:10px solid black;
+    /*background-color: #fff; */
+    overflow: hidden;
+}
+.clock:after{
+    z-index: -100;
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background: #43C6AC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* background: linear-gradient(285deg, rgba(0,0,0,0.175) 50% , rgba(0,0,0,0.1) 50%); */
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius:50%;
+}
+.num{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+}
+/* .input{
+    width:100%;
+} */
+.num:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    width:5px;
+    height: 2vh;
+    background-color: #111;
+}
+.num1{
+    transform: rotate(30deg);
+}
+.num1 div{
+    transform: rotate(-30deg);
+}
+.num2{
+    transform: rotate(60deg);
+}
+.num2 div{
+    transform: rotate(-60deg);
+}
+.num3{
+    transform: rotate(90deg);
+}
+.num3 div{
+    transform: rotate(-90deg);
+}
+.num4{
+    transform: rotate(120deg);
+}
+.num4 div{
+    transform: rotate(-120deg);
+}
+.num5{
+    transform: rotate(150deg);
+}
+.num5 div{
+    transform: rotate(-150deg);
+}
+.num6{
+    transform: rotate(180deg);
+}
+.num6 div{
+    transform: rotate(-180deg);
+}
+.num7{
+    transform: rotate(210deg);
+}
+.num7 div{
+    transform: rotate(-210deg);
+}
+.num8{
+    transform: rotate(240deg);
+}
+.num8 div{
+    transform: rotate(-240deg);
+}
+.num9{
+    transform: rotate(270deg);
+}
+.num9 div{
+    transform: rotate(-270deg);
+}
+.num10{
+    transform: rotate(300deg);
+}
+.num10 div{
+    transform: rotate(-300deg);
+}
+.num11{
+    transform: rotate(330deg);
+}
+.num11 div{
+    transform: rotate(-330deg);
+}
+.hand{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+}
+.hand div{
+    position: absolute;
+    bottom:50%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #000;
+}
+.sec{
+    width:1px;
+    height: 40%;
+}
+.min{
+    height: 38%;
+    width:4px;
+    border-radius: 2px;
+}
+.hour{
+    height: 28%;
+    width:8px;
+    border-radius: 4px;
+}
+#alarm{
+    width:500px !important;
+}
+input,#cover{
+    text-align: center;
+    width:500px;
+    height: 40px;
+    /* border:5px solid black; */
+    border:none;
+    border-radius:15%;
+}
+#cover{
+    background-color: white;
+    color:black;
+    text-align: center;
+    font-size: 20px;
+}
+#dt{
+    text-align:center;
+    margin-left:100px;
+    position: relative;
+    right:10%;
+    font-size: 40px;
+    line-height: 1.4;
+    color: #000;
+    text-shadow: 0 0 20px #ff005b;
+    margin-bottom:10px;
+}
+.time{
+    font-size: 50px;
+    font-family: monospace;
+}
+#dt:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fe3a80;
+    z-index: -2;
+    opacity: 0.5;
+    filter:blur(40px);
+}
+select{
+    width:24%;
+    height: 40px;
+    font-size: 25px;
+}
+option{
+    font-size: 15px;
+}
+.set,.stop{
+    width: 80px;
+    height: 40px;
+    font-size: 25px;
+    background-color:#e8ffff;
+    border:none;
+    border-radius: 10px;
+}
+/* .stop{
+    position:relative;
+    right:20px; 
+} */
+.stop{
+    position:relative;
+    left:330px;
+}
+button:hover,.time:hover{
+    transform: scale(1.1);
+}
+ @media only screen and (max-height:550px)
+ {
+    .clock::before{
+        width: 10px;
+        height: 10px;
+    }
+ }
+ @media only screen and (max-height:350px)
+ {
+     .clock{
+    border:7px solid #111;
+     }
+ }
+ 
+ @media only screen and (max-width:500px)
+ {
+     .clock{
+    height: 300px;
+    width: 300px;
+     }
+ }
+ @media only screen and (max-width:950px)
+ {
+     #whole,#rest{
+         width:40%;
+         margin:10px;
+     }
+     .clock{
+    height: 300px;
+    width: 300px;
+     }
+    #alarm{
+        width:400px !important;
+    }
+    input,#cover{
+       width:400px;
+       height: 30px;
+    }
+    .stop{
+        left:230px;
+    }
+    #dt{
+        font-size:20px;
+    }
+    .time{
+        font-size:30px;
+    }
+ }
+ @media only screen and (max-width:820px)
+ { 
+     #whole{
+         position:absolute;
+         top:50px;
+     }
+     #rest{
+         position:relative;
+         top:200px;
+         right:60px;
+     }
+ }
+ @media only screen and (max-width:414px)
+ { 
+     #whole{
+         position:absolute;
+         top:50px;
+         left:90px;
+     }
+     #rest{
+         position:relative;
+         top:80px;
+         right:70px;
+     }
+     .clock{
+    height: 200px;
+    width: 200px;
+    border:5px solid cyan;
+     }
+    #alarm{
+        width:300px !important;
+    }
+    input,#cover{
+        width:280px;
+    }
+    .set,.stop{
+        width:40px;
+        height:30px;
+        font-size:15px;
+    }
+    select{
+        width:22%;
+    }
+    .stop{
+        left:200px;
+    }
+    .num{
+        font-size:12px;
+    }
+    #dt{
+        font-size:15px;
+        right:50px;
+    }
+    .time{
+        font-size:20px;
+    }
+ }@media only screen and (max-width:400px)
+ { 
+     #whole{
+         position:absolute;
+         top:50px;
+         left:70px;
+     }
+     #rest{
+         position:relative;
+         top:100px;
+         right:70px;
+     }
+     .clock{
+    height: 200px;
+    width: 200px;
+    border:5px solid;
+     }
+    #alarm{
+        width:300px !important;
+    }
+    input,#cover{
+        width:280px;
+    }
+    .set,.stop{
+        width:40px;
+        height:30px;
+        font-size:15px;
+    }
+    select{
+        width:22%;
+    }
+    .stop{
+        left:200px;
+    }
+    .num{
+        font-size:12px;
+    }
+    #dt{
+        font-size:15px;
+        right:50px;
+    }
+    .time{
+        font-size:20px;
+    }
+ }
+ #welcome{
+     position:absolute;
+     background-color:black;
+     text-align:center;
+     width:100vw;
+     height:100vh;
+ }
+ #welcome p{
+     font-size: 400%;
+     color: white;
+     margin:auto;
+     padding:10% 0;
+ }
+ .heartbeat{animation:heartbeat 1.5s ease-in-out infinite both}
+
+ /* ----------------------------------------------
+ * Generated by Animista on 2020-12-30 13:7:2
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+@keyframes heartbeat{from{transform:scale(1);transform-origin:center center;animation-timing-function:ease-out}10%{transform:scale(.91);animation-timing-function:ease-in}17%{transform:scale(.98);animation-timing-function:ease-out}33%{transform:scale(.87);animation-timing-function:ease-in}45%{transform:scale(1);animation-timing-function:ease-out}}
+
+.pulsate-bck{animation:pulsate-bck 1s ease-in-out infinite both}
+/* ----------------------------------------------
+ * Generated by Animista on 2020-12-30 13:9:56
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+ @keyframes pulsate-bck{0%{transform:scale(1)}50%{transform:scale(.9)}100%{transform:scale(1)}}
+
+ .one-edge-shadow {
+    box-shadow: 0 8px 6px -6px black;
+  }
+  .one-edge-shadow-2 {
+    box-shadow: 0 10px 30px -6px black;
+  }
