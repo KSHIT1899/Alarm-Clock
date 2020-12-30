@@ -94,8 +94,8 @@ background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, F
     top:0;
     left:50%;
     transform: translateX(-50%);
-    width:5px;
-    height: 2vh;
+    width:3px;
+    height:1vh;
     background-color: #111;
 }
 .num1{
