@@ -3,7 +3,6 @@ var sound=document.getElementById("music");
 
 //document.querySelector("alarmtime").innerHTML="22";
 
-window.onload=function(){
     var sound=document.getElementById("music");
     //sound.mute=true;
 setInterval(updateDate, 1000);
@@ -89,7 +88,6 @@ else
     document.getElementById("welcome").classList.remove("hide");
     console.log("where");
     //playalarm();
-}
 }
 
 
