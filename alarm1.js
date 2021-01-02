@@ -97,7 +97,10 @@ function disappear()
 //     // sound.mute=true;
 //     // sound.loop=true;
     //console.log("hey");
+    if(localStorage.getItem("alarmtime"))
+    {
     playalarm();
+    }
     document.getElementById("welcome").classList.add("hide");
 }
 // function setalarm(){
