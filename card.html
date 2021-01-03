@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <title>Card</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+        .card{
+            width:800px;
+            height: 400px;
+            background-color: darkgreen;
+            margin: auto;
+        }
+        .logo{
+            width: 500px;
+            height: 400px;
+            background-color: #fff;
+            float: right;
+            border:2px solid darkgreen;
+            text-align: center;
+            color:darkgreen;
+            display: inline;
+            line-height: 1.2;
+        }
+        .double-border{
+            width: 262px;
+            height: 262px;
+            position: absolute;
+            background-color:none;
+            border:8px solid darkkhaki;
+            border-radius: 5%;
+            bottom:-1px;
+            left:-7px;
+        }
+        .img-logo{
+            height: 60px;
+            width: 200px;
+            margin-top:10px;
+        }
+        h1{
+            width:300px;
+            font-size:30px;
+            margin: 40px auto 30px;
+            border-top:2px solid darkgreen;
+            border-bottom:2px solid darkgreen;
+        }
+        h1 p{
+            border: 3px solid darkgreen;
+            border-radius: 100%;
+            display: inline;
+            font-size: 1px;
+            position: relative;
+            bottom:10px;
+            right:4px;
+            background-color: darkgreen;
+        }
+        .city{
+            font-size: 13px;
+            font-weight: 1000;
+            margin: 5px auto 5px auto;
+            width:80px;
+            border-bottom:2px solid darkkhaki;
+            border-radius: 20%;
+        }
+        .qr{
+           z-index: 200;
+           display: inline;
+           position: relative;
+           top:60px;
+           left:100px;
+            /* width:220px;
+            height: 220px; */
+        }
+        .qr-img{
+           height: 250px;
+           width: 250px;
+           background-color: darkgreen;
+           border:10px solid darkgreen;
+           border-radius: 5%;
+           padding: 0;
+           /* border-style:double; */
+        }
+        .qr p{
+            display: inline;
+            position: absolute;
+            left:75px;
+            top:8px;
+            color: #fff;
+            font-size:20px;
+        }
+         .example{
+             font-size: 15px ;
+             font-weight: 1000;
+             margin-top:20px;
+         }
+         p span{
+             font-size: 25px;
+         }
+         .bold{
+             font-weight: 1000;
+         }
+         .to{
+             font-size:18px;
+             margin-top: 50px;
+         }
+    </style>
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>  
+    <script type="text/javascript" src="jquery.arctext.js"></script>
+
+    <!-- <script src="arctext.js"></script> -->
+</head>
+<body>
+    <div class="card">
+        <div class="qr">
+            <div class="double-border">
+    
+            </div>
+                <img class="qr-img"src="qr.png" alt="">
+            <p>Table No.A01</p>
+        </div>
+        <div class="logo">
+           <img class="img-logo"src="png_brown_logo.png"></img:src>
+           <p class="city">Lucknow</p>
+           <h2 class="example">Tastefully Wasted</h2>
+           <h1>SCAN <p></p> ORDER <p></p> PAY</h1>
+           <p class="to">
+               To access:
+               <br>
+               <span>
+                    Open Camera & Scan
+                   <br>
+                   OR
+                   <br>
+                   Go on <span class="bold">hiqr.in</span> & Scan
+                </span>
+           </p>
+        </div>
+    </div>
+    <script>
+        var example=document.getElementsByClassName("example");
+        $(example).arctext({radius: 450, dir: -1});
+    </script>
+</body>
+</html>
